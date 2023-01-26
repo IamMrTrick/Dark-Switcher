@@ -1,0 +1,51 @@
+/* Conflagration - Demo things */
+
+:root {
+    --content-background : #e2e2e2;
+    --border-dark-switcher : #1b1b1b;
+}
+
+body[darkmode="dark"] {
+    --content-background : #1b1b1b;
+    --border-dark-switcher : #e2e2e2;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--content-background);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+
+/* Dark Swticher */
+
+.tr-dark-switcher {
+    position: relative;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    border-radius: 10rem;
+    border: 1px solid var(--border-dark-switcher);
+    transition: 0.3s;
+}
+
+.tr-dark-switcher::before {
+    content: '';
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: 1px solid var(--border-dark-switcher);
+    position: absolute;
+    left: 5px;
+    top: calc(50% - 21px);
+    transition: 0.3s;
+}
+
+.activated.tr-dark-switcher::before {
+    left: calc(100% - 46px);
+}
