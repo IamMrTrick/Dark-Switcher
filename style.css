@@ -25,6 +25,7 @@ body {
 /* Dark Swticher */
 
 .tr-dark-switcher {
+    background: rgba(255, 255, 255, 0.5);
     position: relative;
     cursor: pointer;
     width: 100px;
@@ -43,9 +44,13 @@ body {
     position: absolute;
     left: 5px;
     top: calc(50% - 21px);
-    transition: 0.3s;
+    background: #1b1b1b url(ico/moon.svg) center/80% no-repeat;
+    transform: rotate(0deg);
+    transition: 0.3s;  
 }
 
 .activated.tr-dark-switcher::before {
     left: calc(100% - 46px);
+    background: #1b1b1b url(ico/sun.svg) center/80% no-repeat;
+    transform: rotate(359deg);
 }
